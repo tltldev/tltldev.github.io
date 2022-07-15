@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}</title>
 
@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <!-- <script src="{{ site.baseurl }}/js/jquery-2.2.3.min.js"></script> -->
-    <script src="{{ site.baseurl }}/js/motdSelector.js"></script>
+    <script src="{{ site.baseurl }}/js/motdSelector.js" defer></script>
     
     <!-- SHOW ANALYTICS -->
     {% include analytics.html %}
