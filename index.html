@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<div class="container">
+	<div id="projects">
+		<p>
+			No donations/commissions.<br>
+			Too inconsistent and neurotic to work in groups.<br>
+			Adobe Photoshop. Epson V600.
+		</p>
+{% assign projArr = site.projects | reverse %}
+{% for post in projArr %}
+		<div class="inlineContainer" title="{{ post.title }}">
+			<a href="{{ post.href }}" class="hoverLink">
+{% if post.outcome == "Current" %}
+				<div class="imgContainer currImgContainer">
+{% else %}
+				<div class="imgContainer pastImgContainer">
+{% endif %}
+{% if post.imgPath %}
+					<img src="{{ site.baseurl }}/images/blog_images/{{ post.imgPath }}" alt="{{ post.title }}">
+{% endif %}
+					<div class="centeredText">
+						<span class="postText textUnderline">
+							{{ post.outcome }}
+{% if post.team %}
+							<br>{{ post.team }}
+{% endif %}
+						</span>
+						<br><span class="postTitle textUpperline">{{ post.title }}</span>
+{% if post.author %}
+						<br><span class="postText">by {{ post.author }}</span>
+{% endif %}
+					</div>
+				</div>
+			</a>
+		</div>
+{% endfor %}
+	</div>
+</div>

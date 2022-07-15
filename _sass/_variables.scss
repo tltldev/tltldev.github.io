@@ -1,0 +1,37 @@
+// Colors
+$blue:          #4183C4;
+$teal:          #1996BE;
+$palest:        #fbf9ca;
+$paleyellow:    #fbec74;
+$paleorange:    #fbdc75;
+$orange:        #fcb95e;
+$pink:          #f6baae;
+$palepink:      #fbd1d8;
+$lightpurple:   #bfa7cc;
+$purple:        #7c7cbf;
+
+// Grays
+$black: #000;
+$darkerGray: #222;
+$darkGray: #333;
+$gray: #666;
+$lightGray: #ccc;
+$white: #fff;
+
+$linkColor:   $purple;
+$hoverColor:  $pink;
+$imgColor:    $purple;
+$lineColor:   $purple;
+$borderColor: $orange;
+
+// Font stacks
+$helvetica: Helvetica, Arial, sans-serif;
+$helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$georgia: Georgia, serif;
+
+// Mobile breakpoints
+@mixin mobile {
+  @media screen and (max-width: 700px) {
+    @content;
+  }
+}

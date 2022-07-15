@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}</title>
+
+    {% include meta.html %}
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <!-- <script src="{{ site.baseurl }}/js/jquery-2.2.3.min.js"></script> -->
+    <script src="{{ site.baseurl }}/js/motdSelector.js"></script>
+    
+    <!-- SHOW ANALYTICS -->
+    {% include analytics.html %}
+    <!--  END ANALYTICS -->
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="wrapper-masthead">
+        <header class="masthead clearfix">
+          <div id="site-info">
+            <h1 id="site-name"><a href="https://mangadex.org/group/244">{{ site.name }}</a></h1>
+            <p id="site-description">
+              {% if site.footer-links.twitter %}
+                <a href="https://www.twitter.com/{{ site.footer-links.twitter }}" target="_blank">
+                  <img src="{{ site.baseurl }}/images/icons/twitter.png" alt="Twitter" title="Twitter" class="iconLrg">
+                </a>
+              {% endif %}
+              {% if site.footer-links.email %}
+                <a href="mailto:{{ site.footer-links.email }}">
+                  <img src="{{ site.baseurl }}/images/icons/email.png" alt="E-mail" title="E-mail" class="iconLrg">
+                </a>
+              {% endif %}
+            </p>
+            <p id="motd"></p>
+          </div>
+
+        </header>
+      </div>
+    </div>
+
+    {{ content }}
+
+    {% if false %}
+      <!-- COMMENTED OUT -->
+      <!-- SHOW FOOTER -->
+      <div class="wrapper-footer">
+        <div class="container">
+          <footer class="footer">
+            {% include svg-icons.html %}
+          </footer>
+        </div>
+      </div>
+      <!--  END FOOTER -->
+    {% endif %}
+  </body>
+</html>
