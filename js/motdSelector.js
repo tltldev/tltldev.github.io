@@ -50,6 +50,7 @@ var motdArr = [
 	'いつか、いつの日か見つかるはず',
 	'心の荷物たちを捨てにゆこうね',
 	'意味のない毎日を積み重ねるだけで、悔しいけど幸せ',
+	'从x˵╹ ◡ ╹˶x从',
 ];
 document.addEventListener('DOMContentLoaded', function() {
 	var index = Math.floor((Math.random() * motdArr.length));
